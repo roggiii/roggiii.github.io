@@ -1,0 +1,25 @@
+---
+layout: post
+title: AB18X5 Real Time Clock
+slug: ab18x5
+---
+specifically AB1815
+
+### Goals:
+
+\- as low as possible power consumption  
+\- disconnect MCU when not in use, not only wake up over interrupt  
+\- high clock accuracy not needed, should be able to wake up MCU every 30 seconds, can diviate a few percent  
+\- save data from MCU to internal RTC RAM 
+
+
+
+
+
+The [Datasheet](https://abracon.com/Support/AppsManuals/Precisiontiming/AB18XX-Application-Manual.pdf) is best downloaded directly from the manufacturer Abracon, because the usual sources like Mouser/Digikey only provide a abbreviated version.
+
+It comes in a 16 pin QFN package, which is only 3x3mm in size. Soldering with a hot air gun should be possible.
+
+![alternate text](./schaltplan.jpg "Title")
+![alternate text](./3D_modell.jpg "Title")
+![alternate text](./RTC_sleep.jpg "Title")
