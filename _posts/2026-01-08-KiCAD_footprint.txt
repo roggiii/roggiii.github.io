@@ -1,0 +1,18 @@
+---
+layout: post
+title: Draw komplex footprints
+slug: footprints
+---
+
+\- create sketch in Fusion and 
+\- export it by rightclicking on the sketch as .dxf file. In the export menu uncheck all three boxes
+\- create new footprint in KiCad
+\- import DXF: File -> Import -> Graphics.. (CTRL+SHIFT+F). Leave the import scale as 1 and uncheck "group supported items"
+\- select all the shapes belonging to one pad
+\- right click "create from selection" -> "create polygon from selection.." and use the option "use centerlines"
+\- change created pads to copper
+\- create new pads and fit them inside the shape
+\- right click on the pad and select "edit Pad as Graphic Shapes" or CTRL+E
+\- Press CTRL+E to leave the Pad Edit Mode
+
+The pad now should have the right shape
