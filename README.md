@@ -1,1 +1,1 @@
-my blog: https://roggiii.github.io/blog/
+my blog: https://roggiii.github.io/
