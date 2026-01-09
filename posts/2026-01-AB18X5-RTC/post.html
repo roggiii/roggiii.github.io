@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AB18X5 Real Time Clock</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+
+<h1 class="title">AB18X5 Real Time Clock</h1>
+
+<p>Specifically AB1815.</p>
+
+<h2>Goals</h2>
+
+<ul>
+    <li>As low as possible power consumption</li>
+    <li>Disconnect MCU when not in use, not only wake up over interrupt</li>
+    <li>High clock accuracy is not critical; should be able to wake up MCU every 30 seconds (can deviate a few percent)</li>
+    <li>Save data from MCU to internal RTC RAM</li>
+</ul>
+
+<h2>Footprint</h2>
+
+<p>The <a href="https://abracon.com/Support/AppsManuals/Precisiontiming/AB18XX-Application-Manual.pdf">Datasheet</a> is best downloaded directly from the manufacturer Abracon, because usual sources like Mouser or Digikey only provide an abbreviated version.</p>
+
+<p>The AB18X5 comes in a 16-pin QFN package, which is only 3×3 mm in size. Soldering with a hot air gun should be possible. The thermal pad on the bottom side needs to be connected to ground.</p>
+
+<p>All footprints I found online were not suitable. The closest standard library part <strong>QFN-16-1EP_3x3mm_P0.5mm_EP1.7x1.7mm</strong> was also not ideal. So I decided to make my own.</p>
+
+<p>Since I find it quite tedious to draw footprints directly in KiCad, I usually do it in Fusion 360 and then export a <code>.dxf</code> file.</p>
+
+<figure>
+    <img src="landing_pattern.jpg" width="200">
+    <figcaption>Landing Pattern</figcaption>
+</figure>
+
+<figure>
+    <img src="schaltplan.jpg" width="200">
+    <figcaption>Schematic</figcaption>
+</figure>
+
+<figure>
+    <img src="3D_modell.jpg" width="200">
+    <figcaption>3D Model</figcaption>
+</figure>
+
+<figure>
+    <img src="RTC_sleep.jpg" width="200">
+    <figcaption>RTC Sleep Mode</figcaption>
+</figure>
+
+</body>
+</html>
