@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Create Non-Rectangular Pads in KiCad 9</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+</head>
+    
+<body>
+<p><a href="../../index.html">&larr; Back to Blog</a></p>
+<h1 class="title">Create Non-Rectangular Pad Shapes in KiCad 9</h1>
+    
+<p style="text-align: justify;">
+    I find it quite tedious to create complex pads or footprints in the KiCad editor itself.
+    The main problem is that many manufacturers specify their part dimensions quite tricky for them to be
+    replicated in KiCad, since it does not offer the extended sketch features of programms like Fusion 360.
+</p>
+
+<p>The following steps should function as a guide to create the pads for this <a href="datasheet_inductor.pdf">Inductor</a>.</p>
+    
+<ol>
+    <li>Create sketch in Fusion with the dimension from the datasheet
+    <figure>
+        <img src="datasheet.jpg" width="200">
+        <img src="fusion_footprint.jpg" width="200">
+    </figure>
+    </li>
+    <li>
+        Export it by right-clicking on the sketch as a .dxf file. In the export menu uncheck all three boxes.
+        You can use this <a href="Inductor.dxf">.dxf file</a> to directly play along in KiCad.
+    </li>
+    <li>Create new footprint in KiCad</li>
+    <li>Import DXF: File → Import → Graphics or CTRL+SHIFT+F. Leave the import scale as 1 and uncheck "group supported items".
+    <figure>
+        <img src="imported_raw.png" width="200">
+    </figure>
+    </li>
+    <li>Select all the shapes belonging to one pad</li>
+    <li>Right-click → "Create from selection" → "Create polygon from selection…" and use the option "Use centerlines"
+    <figure>
+        <img src="group_by_selection.jpg" width="400">
+    </figure>
+    </li>
+    <li>Change created pads to copper
+    <figure>
+        <img src="copper_pad.jpg" width="200">
+    </figure>
+    </li>
+    <li>Create new pads and fit them completly inside the shape
+    <figure>
+        <img src="pads_raw.jpg" width="200">
+    </figure>
+    </li>
+    <li>Right-click on the pad and select "Edit Pad as Graphic Shapes" or press CTRL+E</li>
+    <li>Press CTRL+E to leave the Pad Edit Mode. The pad now should have the right shape.
+    <figure>
+        <img src="finished.jpg" width="200">
+    </figure>
+    </li>
+</ol>
+
+<p><a href="../../index.html">&larr; Back to Blog</a></p>
+
+</body>
+</html>
