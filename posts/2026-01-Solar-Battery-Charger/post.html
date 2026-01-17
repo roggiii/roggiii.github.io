@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>AB18X5 Real Time Clock</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+
+<h1 class="title">Solar Battery Charger - Low power</h1>
+
+<h2>Design Requirements</h2>
+
+<ul>
+    <li>As low as possible power consumption from the chip itself</li>
+    <li>Readout battery charge level over I²C</li>
+    <li>Charge singe LiPo battery</li>
+    <li>Charge with a 6V 2W Solarpanel</li>
+    <li>Charging over USB</li>
+</ul>
+
+MPPT features optional
+
+<h2>Footprint</h2>
+
+
+<figure>
+    <img src="landing_pattern.jpg" width="300">
+    <figcaption>Landing Pattern from the datasheet</figcaption>
+</figure>
+
+
+
+<ul>
+    <li><a href="https://electronics.stackexchange.com/questions/208025/abracon-rtcc-no-startup-oscillation-no-spi">Stack-Exchange Fault Search</a></li>
+    <li><a href="https://github.com/schreinerman/amx8x5/blob/main/examples/timer-wakeup/timer-wakeup.ino">Git Code</a></li>
+    <li><a href="https://abracon.com/Precisiontiming/ABX8X5-EVK-User-Guide-06262015-temp.pdf">Abracom Dev Board Docs</a></li>
+    <li><a href="https://lowpowerlab.com/forum/projects/ab18x5-breakout-board/">Forum Breakout Board</a></li>
+</ul>
+
+</body>
+</html>
